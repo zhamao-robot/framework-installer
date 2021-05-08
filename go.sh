@@ -60,5 +60,5 @@ echo "成功下载！" && \
 rm -rf /tmp/.zm-runtime && \
   mv $(pwd)/runtime /tmp/.zm-runtime && \
   /tmp/.zm-runtime/composer -n config -g repo.packagist composer https://mirrors.aliyun.com/composer && \
-  PATH="/tmp/.zm-runtime:$PATH" /tmp/.zm-runtime/composer -n create-project zhamao/framework-starter "$(pwd)" && \
+  PATH="/tmp/.zm-runtime:$PATH" /tmp/.zm-runtime/composer -n create-project zhamao/framework-starter:^2.5 "$(pwd)" && \
   mv /tmp/.zm-runtime/ $(pwd)/runtime
